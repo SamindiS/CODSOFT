@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #58867c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .calculator {
+            width: 300px;
+            background-color: #2c3e50;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .display {
+            background-color: #34495e;
+            color: #fff;
+            font-size: 24px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: right;
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+            outline: none;
+        }
+        
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+        
+        .button {
+            background-color: #1abc9c;
+            color: #fff;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #16a085;
+        }
+        
+        .button.clear {
+            grid-column: span 2;
+        }
+        
+        .button.equals {
+            grid-column: span 2;
+            background-color: #3498db;
+        }
+    </style>
+    <script>
+        function solve(val) {
+            var v = document.getElementById('result');
+            v.value += val;
+        }
+
+        function calculate() {
+            var num1 = document.getElementById('result').value;
+            var num2 = eval(num1);
+            document.getElementById('result').value = num2;
+        }
+
+        function clearInput() {
+            var inp = document.getElementById('result');
+            inp.value = '';
+        }
+
+        function backspace() {
+            var ev = document.getElementById('result');
+            ev.value = ev.value.slice(0, -1);
+        }
+    </script>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="result" class="display" readonly>
+        <div class="buttons">
+            <button class="button clear" onclick="clearInput()">C</button>
+            <button class="button" onclick="solve('%')">%</button>
+            <button class="button" onclick="backspace()">←</button>
+            <button class="button" onclick="solve('/')">/</button>
+            <button class="button" onclick="solve('7')">7</button>
+            <button class="button" onclick="solve('8')">8</button>
+            <button class="button" onclick="solve('9')">9</button>
+            <button class="button" onclick="solve('*')">x</button>
+            <button class="button" onclick="solve('4')">4</button>
+            <button class="button" onclick="solve('5')">5</button>
+            <button class="button" onclick="solve('6')">6</button>
+            <button class="button" onclick="solve('-')">-</button>
+            <button class="button" onclick="solve('1')">1</button>
+            <button class="button" onclick="solve('2')">2</button>
+            <button class="button" onclick="solve('3')">3</button>
+            <button class="button" onclick="solve('+')">+</button>
+            <button class="button" onclick="solve('00')">00</button>
+            <button class="button" onclick="solve('0')">0</button>
+            <button class="button" onclick="solve('.')">.</button>
+            <button class="button equals" onclick="calculate('=')">=</button>
+        </div>
+    </div>
+</body>
+
+</html>
