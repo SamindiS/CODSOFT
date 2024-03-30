@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Landing Page</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ecommerce.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        body {
+            background: linear-gradient(to right top, #9aabda, #cccdce, #d4d8d8, #c9d3cf, #fdfdfd);
+            overflow-x: hidden;
+            /* Adding gradient background */
+            position: relative;
+        }
+        
+        .circle {
+            position: absolute;
+            /* Position circles absolutely */
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.534);
+            /* Semi-transparent white */
+            z-index: -1;
+            /* Behind other content */
+        }
+        
+        .circle-1 {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            left: 10%;
+        }
+        
+        .circle-2 {
+            width: 100px;
+            height: 100px;
+            bottom: 15%;
+            right: 15%;
+        }
+        
+        .triangle {
+            position: absolute;
+            /* Position triangles absolutely */
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            z-index: -1;
+            /* Behind other content */
+        }
+        
+        .triangle-1 {
+            border-bottom: 100px solid rgba(255, 255, 255, 0.658);
+            /* Semi-transparent white */
+            top: 30%;
+            left: 30%;
+        }
+        
+        .triangle-2 {
+            border-top: 100px solid rgba(255, 255, 255, 0.15);
+            /* Semi-transparent white */
+            bottom: 30%;
+            right: 30%;
+        }
+        /* Navigation Bar Styles */
+        
+        .logo {
+            margin-left: 20px;
+        }
+        
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-links li {
+            margin: 0 20px;
+        }
+        
+        .nav-links li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links li a:hover {
+            color: #555;
+        }
+        
+        .top-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .search-button,
+        .cart-button {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        
+        .profile-photo img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+        /* Background Color Changing Button Styles */
+        
+        .background-change-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            z-index: 9999;
+        }
+        
+        .background-change-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Circles -->
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+
+    <!-- Triangles -->
+    <div class="triangle triangle-1"></div>
+    <div class="triangle triangle-2"></div>
+
+    <!-- Main Container Start -->
+    <div class="main-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <a href="#"> <span>B</span>agParadise</a>
+            </div>
+            <div class="nav-links">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="top-icons">
+                <div class="search-button"><i class="fas fa-search"></i></div>
+                <div class="cart-button"><i class="fas fa-shopping-cart"></i></div>
+                <div class="profile-photo"><img src="fas fa-profile" alt="Profile Photo"></div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Home Section -->
+            <section id="home" class="home section">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h1>Welcome to Bag Paradise</h1>
+                            <p>Discover the best deals on a wide range of products!</p>
+                            <a href="#products" class="btn explore-btn">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Categories Section -->
+            <section id="categories" class="categories section">
+                <div class="container">
+                    <h2>Shop by Category</h2>
+                    <div class="row">
+                        <!-- Add category containers here -->
+                        <div class="category">
+                            <img src="images/1.jpg" alt="Category 1">
+                            <h3>Leather</h3>
+                        </div>
+                        <div class="category">
+                            <img src="images/2.jpg" alt="Category 2">
+                            <h3>Wool</h3>
+                        </div>
+                        <div class="category">
+                            <img src="images/3.jpg" alt="Category 3">
+                            <h3>Cloths</h3>
+                        </div>
+                        <div class="category">
+                            <img src="images/4.jpg" alt="Category 4">
+                            <h3>School Bags</h3>
+                        </div>
+                        <div class="category">
+                            <img src="images/5.jpg" alt="Category 5">
+                            <h3>Office bags</h3>
+                        </div>
+                        <!-- Add more category containers as needed -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+            <section id="products" class="products section">
+                <!-- Product listings go here -->
+                <h2>New Products</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="featured-products">
+                            <div class="product">
+                                <!-- Product 1 content -->
+                                <img src="images/2.jpg" alt="Product 1">
+                                <h3>New wool bags</h3>
+                                <p class="price">$30.99</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <!-- Product 2 content -->
+                                <img src="images/3.jpg" alt="Product 1">
+                                <h3>Cloth Bags with embroider designs</h3>
+                                <p class="price">$19.99</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <!-- Product 3 content -->
+                                <img src="images/4.jpg" alt="Product 1">
+                                <h3>Leather bags with gold color handle</h3>
+                                <p class="price">$23.00</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <!-- Product 4 content -->
+                                <img src="images/1.jpg" alt="Product 1">
+                                <h3>New French white bag</h3>
+                                <p class="price">$19.99</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <!-- Product 5 content -->
+                                <img src="images/6.jpg" alt="Product 1">
+                                <h3>Black storing bag</h3>
+                                <p class="price">$39.99</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <!-- Add more product containers as needed -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Most Popular Products Section -->
+            <section id="popular" class="most-popular section">
+                <div class="container">
+                    <h2>Most Popular Products</h2>
+                    <div class="row">
+                        <div class="popular-products">
+                            <div class="product">
+                                <!-- Product 1 content -->
+                                <img src="images/2.jpg" alt="Product 1">
+                                <h3>New wool bags</h3>
+                                <p class="price">$30.99</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <!-- Product 2 content -->
+                                <img src="images/3.jpg" alt="Product 1">
+                                <h3>Cloth Bags </h3>
+                                <p class="price">$19.99</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <!-- Product 3 content -->
+                                <img src="images/5.jpg" alt="Product 1">
+                                <h3>Mens'office bag</h3>
+                                <p class="price">$24.99</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <!-- Product 4 content -->
+                                <img src="images/1.jpg" alt="Product 1">
+
+                                <h3>New French white bag</h3>
+
+                                <p class="price">$24.99</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <!-- Product 5 content -->
+                                <img src="images/6.jpg" alt="Product 1">
+                                <h3>Leather bags </h3>
+                                <p class="price">$24.99</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <!-- Product 5 content -->
+                                <img src="images/4.jpg" alt="Product 1">
+                                <h3>Product Name</h3>
+                                <p class="price">$19.99</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+
+                            <!-- Add more product containers as needed -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quality Section -->
+            <section id="quality" class="quality section">
+                <div class="container">
+                    <h2>Product Quality</h2>
+                    <div class="row">
+                        <div class="quality-details">
+                            <div class="product-photo">
+                                <img src="images/1.jpg" alt="Product Photo">
+                            </div>
+                            <div class="product-info">
+                                <h4> "Our products are crafted with the finest materials and meticulous attention to detail, ensuring durability, functionality, and style. Each item is designed to meet the highest standards of quality, providing our customers
+                                    with long-lasting satisfaction and exceptional value. Whether it's the superior craftsmanship, premium materials, or timeless designs, our products promise unmatched quality that stands the test of time." </h4>
+
+                                <ul>
+                                    <li>High-quality materials</li>
+                                    <li>Durable and long-lasting</li>
+                                    <li>Eco-friendly production</li>
+                                </ul>
+                                <a href="#" class="btn explore-btn">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our Services Section -->
+            <section id="services" class="services section">
+                <div class="container">
+                    <h2>Our Services</h2>
+                    <div class="row">
+                        <div class="service">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h3>Fast Shipping</h3>
+                            <p>We offer fast and reliable shipping options for all orders.</p>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-headphones"></i>
+                            <h3>24/7 Customer Support</h3>
+                            <p>Our dedicated customer support team is available 24/7 to assist you.</p>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-award"></i>
+                            <h3>High Quality Products</h3>
+                            <p>We source only the highest quality products for our customers.</p>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <h3>Money Back Guarantee</h3>
+                            <p>If you're not satisfied with your purchase, we offer a full money-back guarantee.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- About Us Section -->
+            <section id="about-us" class="about-us section">
+                <div class="container">
+                    <h2>About Us</h2>
+                    <div class="row">
+                        <div class="about-content">
+                            <p>At Bag Paradise, we are passionate about providing our customers with the best shopping experience possible. With a commitment to quality, innovation, and customer satisfaction, we strive to offer a diverse range of products
+                                that cater to every need and preference
+                            </p>
+                            <p>Our dedicated team works tirelessly to curate a collection of premium goods, sourced from reputable suppliers around the globe. Whether you're looking for fashion-forward accessories, practical gadgets, or unique gifts, we
+                                aim to exceed your expectations with every purchase</p>
+                            <p>Discover the essence of Bag Paradise and join us on our journey to redefine online shopping..</p>
+                        </div>
+                        <div class="about-image">
+                            <img src="images/3.jpg" alt="About Us Image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <footer>
+                <div class="f-container">
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Colombo7,Sri Lanka</li>
+                            <li><i class="fas fa-phone"></i> +1234567890</li>
+                            <li><i class="fas fa-envelope"></i> bagparadise@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class="social-media">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <!-- Add more social media icons as needed -->
+                        </ul>
+                    </div>
+                </div>
+                <p>&copy; 2024 Ecommerce. All rights reserved.</p>
+            </footer>
+
+        </div>
+        <!-- Main Container End -->
+
+        <!-- JavaScript Files -->
+        <script src="js/script.js"></script>
+        <script>
+            // JavaScript for left side arrow scrolling
+            document.getElementById('left-arrow').addEventListener('click', function() {
+                document.querySelector('.popular-products').scrollLeft -= 300; // Adjust scroll distance as needed
+            });
+        </script>
+</body>
+
+</html>
