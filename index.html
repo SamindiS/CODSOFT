@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/skins/color-1.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        body {
+            background: linear-gradient(to right top, #9aabda, #cccdce, #d4d8d8, #c9d3cf, #fdfdfd);
+            overflow-x: hidden;
+            /* Adding gradient background */
+            position: relative;
+        }
+        
+        .circle {
+            position: absolute;
+            /* Position circles absolutely */
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.534);
+            /* Semi-transparent white */
+            z-index: -1;
+            /* Behind other content */
+        }
+        
+        .circle-1 {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            left: 10%;
+        }
+        
+        .circle-2 {
+            width: 100px;
+            height: 100px;
+            bottom: 15%;
+            right: 15%;
+        }
+        
+        .triangle {
+            position: absolute;
+            /* Position triangles absolutely */
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            z-index: -1;
+            /* Behind other content */
+        }
+        
+        .triangle-1 {
+            border-bottom: 100px solid rgba(255, 255, 255, 0.658);
+            /* Semi-transparent white */
+            top: 30%;
+            left: 30%;
+        }
+        
+        .triangle-2 {
+            border-top: 100px solid rgba(255, 255, 255, 0.15);
+            /* Semi-transparent white */
+            bottom: 30%;
+            right: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Circles -->
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+
+    <!-- Triangles -->
+    <div class="triangle triangle-1"></div>
+    <div class="triangle triangle-2"></div>
+
+    <!-- Main Container Start -->
+    <div class="main-container">
+        <!-- Aside (Navigation) -->
+        <div class="aside">
+            <div class="logo">
+                <a href="#"> <span>P</span>ortfolio</a>
+            </div>
+            <div class="nav-toggler">
+                <span></span>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="#home"> <i class="fa fa-home"></i>Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="aboutlink"> <i class="fa fa-home"></i>About</a>
+                </li>
+                <li>
+                    <a href="#skills" class="skilllink"> <i class="fa fa-list"></i>Skills</a>
+                </li>
+                <li>
+                    <a href="#projects" class="proectlink"> <i class="fa fa-briefcase"></i>Projects</a>
+                </li>
+                <li>
+                    <a href="#contact" class="contactlink"> <i class="fa fa-comments"></i>Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Home Section -->
+            <section id="home" class="home section">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h3 class="hello">Hello, my name is <span class="name">Samindi Sankalpani</span></h3>
+                            <h3 class="my-profession">I'm a <span class="typing">web designer</span></h3>
+                            <p>I'm a web Designer with a strong foundation in both front-end and back-end technologies, adept at creating dynamic and visually appealing websites. My expertise includes website design, UI design, and more.</p>
+                            <a href="#contact" class="btn hire-me">Hire Me</a>
+                            <a href="images/samindisankalpani_CV.pdf" class="btn download-cv-btn">Download CV</a>
+                        </div>
+
+                        <div class="home-img padd-15">
+                            <img src="images/profile photo.jpeg" alt="Profile Photo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about section">
+                <div class="container">
+                    <h2>About Me</h2>
+                    <div class="row">
+                        <div class="about-info padd-15">
+
+                            <p>I'm a passionate and creative web designer with expertise in UI design, mobile application design, and more. I enjoy transforming ideas into visually stunning and user-friendly interfaces. With a strong background in both front-end
+                                and back-end technologies, I'm capable of delivering high-quality and responsive websites tailored to meet clients' needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="skills section">
+                <div class="container">
+                    <h2>Skills</h2>
+                    <div class="row">
+                        <div class="skills-list">
+                            <div class="skill">HTML</div>
+                            <div class="skill">CSS</div>
+                            <div class="skill">JavaScript</div>
+                            <div class="skill">React</div>
+                            <div class="skill">MySQL</div>
+                            <div class="skill">NoSQL</div>
+                            <div class="skill">MVC Architecture</div>
+                            <div class="skill">MERN Stack</div>
+                            <div class="skill">Figma Designing</div>
+                            <div class="skill">Basic Android Studio Development</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="project">
+                        <img src="images/6060376.jpg" alt="Resource Booking System" class="project-image">
+                        <div class="project-details">
+                            <h3 class="project-title">Resource Booking System</h3>
+                            <p class="project-description">A resource booking system developed using HTML, CSS, and JS.</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="images/3205212.jpg" alt="Food Delivery App" class="project-image">
+                        <div class="project-details">
+                            <h3 class="project-title">Food Delivery App</h3>
+                            <p class="project-description">A food delivery application implemented using MVC architecture.</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="images/2151202364.jpg" alt="Book Store App" class="project-image">
+                        <div class="project-details">
+                            <h3 class="project-title">Book Store App</h3>
+                            <p class="project-description">A book store application developed using MERN stack.</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="images/5815197.jpg" alt="Figma Designing" class="project-image">
+                        <div class="project-details">
+                            <h3 class="project-title">Figma Designing</h3>
+                            <p class="project-description">Designing food app using Figma.</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="images/38739.jpg" alt="Android Studio Development" class="project-image">
+                        <div class="project-details">
+                            <h3 class="project-title">Android Studio Development</h3>
+                            <p class="project-description">Developing food app using Android Studio.</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="images/UM.jpg" alt="User Management System" class="project-image">
+                        <div class="project-details">
+                            <h3 class="project-title">User Management System</h3>
+                            <p class="project-description">A user management system developed using MERN stack.</p>
+                        </div>
+                    </div>
+                    <!-- Add more project divs with images and details -->
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <footer id="contact">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="contact-info">
+                            <h3>Contact Me</h3>
+                            <ul>
+                                <li><i class="fas fa-phone"></i> Phone: 0784939427</li>
+                                <li><i class="fas fa-envelope"></i> Email: samindisankalpani@gmail.com</li>
+                                <li><i class="fab fa-linkedin"></i> LinkedIn: linkedin.com/in/samindi-sankalpani-070a90270</li>
+                                <!-- Add more contact details as needed -->
+                            </ul>
+                        </div>
+                        <div class="social-icons">
+                            <h3>Follow Me</h3>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://github.com/SamindiS"><i class="fab fa-github"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <!-- Add more social media icons as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="container">
+                        <p>&copy; 2024 Your Name. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+    <!-- Main Container End -->
+
+    <!-- JavaScript Files -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
